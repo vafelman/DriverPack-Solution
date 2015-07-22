@@ -30,8 +30,11 @@
         <!-- { STYLES } -->
         <link rel="stylesheet" type="text/css" href="css/normalize.min.css" />
         <link rel="stylesheet" type="text/css" href="css/open-sans.css" />
+        <link rel="stylesheet" type="text/css" href="css/fonts.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/start.css" />
         <link rel="stylesheet" type="text/css" href="css/ui2.css" />
+        <link rel="stylesheet" type="text/css" href="css/media-queries.css" />
 
         <!--[if (IE 6)]>
              <link rel="stylesheet" type="text/css" href="css/ie6.css" />
@@ -48,6 +51,8 @@
 		<script type="text/javascript" src="Tools/modules/language.js"></script>
 		<script type="text/javascript" src="Tools/modules/error.js"></script>
 		<script type="text/javascript" src="Tools/modules/logs.js"></script>
+        <!-- https://code.google.com/p/css3-mediaqueries-js/ -->
+        <script type="text/javascript" src="https://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 
         <!-- debug mode -->
         <script type="text/javascript" src="js/emulator-patcher.js"></script>
@@ -58,6 +63,7 @@
         <!-- { MODULES } -->
         <script type="text/javascript" src="Tools/modules/DriverPack.js"></script>
         <script type="text/javascript" src="Tools/modules/SoftPack.js"></script>
+        <script type="text/javascript" src="Tools/modules/StartPack.js"></script>
         <script type="text/javascript" src="Tools/modules/WgetPack.js"></script>
 		<script type="text/javascript" src="Tools/modules/statistics.js"></script>
 		<script type="text/javascript" src="Tools/modules/onunload.js"></script>
@@ -179,7 +185,22 @@ setTimeout(function(){
 </script>
 
 		<div id="loader"><a href="#"></a>&nbsp; <div id="progress"><span id="progressCounter"></span> <br><span id="progressDescription"><br><script>l(infobar_titleLoading)</script></span></div></div>
-        <table class="main">
+        <div id="start">
+            <div class="start_wrapper">
+                <div class="start_wrapper-inner">
+                    <div class="start_head-logo"></div>
+                    <p class="start_head-label">АВТОМАТИЧЕСКАЯ НАСТРОЙКА КОМПЬЮТЕРА</p>
+                    <p class="start_msg">Найдено 9 драйверов для&nbsp;обновления и&nbsp;установки</p>
+                    <button class="ui-green-button start_wrapper-button" onClick="StartPack.clickInstallCustom()">Установить автоматически</button>
+                    <p href="#" class="start_link">
+                        или
+                        <a href="#" onClick="StartPack.clickInstallAll()">Установить вручную</a>
+                    </p>
+                </div>
+                <div class="footer"><p class="footer_copy">Artur Kuzyakov © 2015</p><p class="footer_site">www.drp.su</p></div>
+            </div>
+        </div>
+        <table id="DriverSoft" class="main" style="display: none">
             <tr>
                 <!-- { LEFT BLOCK [CHARMS] }-->
                 <td class="charms">
@@ -399,7 +420,7 @@ setTimeout(function(){
 			log('First init complete');
 
 			statistics.event( { action: 'Screen opened Drivers' } );
-            DriverPack.html();
+            StartPack.html();
         });
 		SoftPack.init(function () {
             //SoftPack.html();
