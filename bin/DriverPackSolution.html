@@ -26,6 +26,7 @@
 			var s = document.getElementsByTagName('script')[0];
 			var ss = s.parentNode.insertBefore(scriptLoading, s);
 		</script>
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
         <!-- { STYLES } -->
         <link rel="stylesheet" type="text/css" href="css/normalize.min.css" />
@@ -33,6 +34,7 @@
         <link rel="stylesheet" type="text/css" href="css/fonts.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link rel="stylesheet" type="text/css" href="css/start.css" />
+        <link rel="stylesheet" type="text/css" href="css/news.css" />
         <link rel="stylesheet" type="text/css" href="css/ui2.css" />
         <link rel="stylesheet" type="text/css" href="css/media-queries.css" />
 
@@ -41,9 +43,9 @@
         <![endif]-->
 
         <!-- debug mode -->
-        <!--
-            <script type="text/javascript" src="js/emulator.js"></script>
-        -->
+
+        <script type="text/javascript" src="js/emulator.js"></script>
+
 
         <!-- { LIBRARIES } -->
 		<script type="text/javascript" src="Tools/modules/version.js"></script>
@@ -63,6 +65,7 @@
         <!-- { MODULES } -->
         <script type="text/javascript" src="Tools/modules/DriverPack.js"></script>
         <script type="text/javascript" src="Tools/modules/SoftPack.js"></script>
+        <script type="text/javascript" src="Tools/modules/News.js"></script>
         <script type="text/javascript" src="Tools/modules/StartPack.js"></script>
         <script type="text/javascript" src="Tools/modules/WgetPack.js"></script>
 		<script type="text/javascript" src="Tools/modules/statistics.js"></script>
@@ -186,19 +189,22 @@ setTimeout(function(){
 
 		<div id="loader"><a href="#"></a>&nbsp; <div id="progress"><span id="progressCounter"></span> <br><span id="progressDescription"><br><script>l(infobar_titleLoading)</script></span></div></div>
         <div id="start">
-            <div class="start_wrapper">
+            <section style="margin-top:50px;width:600px;">
+                <div class="demo4" style="height:200px;"></div>
+            </section>
+<!--             <div class="start_wrapper">
                 <div class="start_wrapper-inner">
                     <div class="start_head-logo"></div>
                     <p class="start_head-label">АВТОМАТИЧЕСКАЯ НАСТРОЙКА КОМПЬЮТЕРА</p>
                     <p class="start_msg">Найдено 9 драйверов для&nbsp;обновления и&nbsp;установки</p>
                     <button class="ui-green-button start_wrapper-button" onClick="StartPack.clickInstallCustom()">Установить автоматически</button>
-                    <p href="#" class="start_link">
+                    <div href="#" class="start_link">
                         или
-                        <a href="#" onClick="StartPack.clickInstallAll()">Установить вручную</a>
-                    </p>
+                        <div class="start_link-holder"><a href="#" onClick="StartPack.clickInstallAll()">Установить вручную</a></div>
+                    </div>
                 </div>
                 <div class="footer"><p class="footer_copy">Artur Kuzyakov © 2015</p><p class="footer_site">www.drp.su</p></div>
-            </div>
+            </div> -->
         </div>
         <table id="DriverSoft" class="main" style="display: none">
             <tr>
