@@ -102,7 +102,7 @@
                      version="0.1"
                      windowState="maximize"/>
 
-    <body class="ui1 start_cta-3">
+    <body class="ui1 start_cta-1">
 
 <script type="text/javascript">
 /*
@@ -189,15 +189,15 @@ setTimeout(function(){
             <div class="start_wrapper">
                 <div class="start_wrapper-inner">
                     <div class="start_head-logo"></div>
-                    <p class="start_head-label">АВТОМАТИЧЕСКАЯ НАСТРОЙКА КОМПЬЮТЕРА</p>
-                    <p class="start_msg start_msg-cta-1">Найдены драйверы для&nbsp;обновления и&nbsp;установки</p>
-                    <p class="start_msg start_msg-cta-2">Найдены драйверы и программы для&nbsp;обновления и&nbsp;установки</p>
-                    <p class="start_msg start_msg-cta-3">Найдены драйверы и программы для&nbsp;обновления и&nbsp;установки</p>
-                    <button class="ui-green-button start_wrapper-button" onClick="statistics.event( { action: 'Button Install All Start clicked' } ); StartPack.clickInstallCustom()">Установить автоматически</button>
-                    <p class="start_msg-counter start_msg-cta-3">Драйверы: X, программы: Y</p>
+                    <p class="start_head-label"><script>l('start_pageTitle')</script></p>
+                    <p class="start_msg start_msg-cta-1"><script>l('start_searchResult1')</script></p>
+                    <p class="start_msg start_msg-cta-2"><script>l('start_searchResult2')</script></p>
+                    <p class="start_msg start_msg-cta-3"><script>l('start_searchResult2')</script></p>
+                    <button class="ui-green-button start_wrapper-button" onClick="statistics.event( { action: 'Button Install All Start clicked' } ); StartPack.clickInstallCustom()"><script>l('start_installAllButton')</script></button>
+                    <p class="start_msg-counter start_msg-cta-3"><script>l('start_counterLabels')</script></p>
                     <div class="start_link">
-                        или
-                        <div class="start_link-holder"><a href="#" onClick="statistics.event( { action: 'Button Expert Mode clicked' } ); StartPack.clickInstallAll()">Установить вручную</a></div>
+                        <script>l('start_or')</script>
+                        <div class="start_link-holder"><a href="#" onClick="statistics.event( { action: 'Button Expert Mode clicked' } ); StartPack.clickInstallAll()"><script>l('start_installManuallyButton')</script></a></div>
                     </div>
                 </div>
                 <div class="footer"><p class="footer_copy">Artur Kuzyakov © 2015</p><p class="footer_site">www.drp.su</p></div>
