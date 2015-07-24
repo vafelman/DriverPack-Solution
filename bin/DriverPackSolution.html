@@ -185,7 +185,7 @@ setTimeout(function(){
 </script>
 
 		<div id="loader"><a href="#"></a>&nbsp; <div id="progress"><span id="progressCounter"></span> <br><span id="progressDescription"><br><script>l(infobar_titleLoading)</script></span></div></div>
-        <div id="start">
+        <div id="Start" class="start">
             <div class="start_wrapper">
                 <div class="start_wrapper-inner">
                     <div class="start_head-logo"></div>
@@ -417,7 +417,7 @@ setTimeout(function(){
 		WshShell.Run('Tools\\streams-d.cmd', 0, false);
 
         // experiment
-        document.body.className = 'ui' + statistics.experiment.ui + ' copy' + statistics.experiment.copy;
+        document.body.className = 'ui' + statistics.experiment.ui + ' copy' + statistics.experiment.copy + ' start_cta-1';
 
 		DriverPack.init(function () {
 			log('First init complete');
