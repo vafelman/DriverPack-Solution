@@ -193,11 +193,11 @@ setTimeout(function(){
                     <p class="start_msg start_msg-cta-1">Найдены драйверы для&nbsp;обновления и&nbsp;установки</p>
                     <p class="start_msg start_msg-cta-2">Найдены драйверы и программы для&nbsp;обновления и&nbsp;установки</p>
                     <p class="start_msg start_msg-cta-3">Найдены драйверы и программы для&nbsp;обновления и&nbsp;установки</p>
-                    <button class="ui-green-button start_wrapper-button" onClick="StartPack.clickInstallCustom()">Установить автоматически</button>
+                    <button class="ui-green-button start_wrapper-button" onClick="statistics.event( { action: 'Button Install All Start clicked' } ); StartPack.clickInstallCustom()">Установить автоматически</button>
                     <p class="start_msg-counter start_msg-cta-3">Драйверы: X, программы: Y</p>
                     <div class="start_link">
                         или
-                        <div class="start_link-holder"><a href="#" onClick="StartPack.clickInstallAll()">Установить вручную</a></div>
+                        <div class="start_link-holder"><a href="#" onClick="statistics.event( { action: 'Button Expert Mode clicked' } ); StartPack.clickInstallAll()">Установить вручную</a></div>
                     </div>
                 </div>
                 <div class="footer"><p class="footer_copy">Artur Kuzyakov © 2015</p><p class="footer_site">www.drp.su</p></div>
